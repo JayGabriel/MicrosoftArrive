@@ -7,8 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		691B174F209AB1DA00658A13 /* SEGOEUI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 691B174E209AB1DA00658A13 /* SEGOEUI.TTF */; };
+		691B1751209ACFB600658A13 /* ScanCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B1750209ACFB600658A13 /* ScanCodeViewController.swift */; };
+		691B1753209AD00B00658A13 /* VisitorEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B1752209AD00B00658A13 /* VisitorEmailViewController.swift */; };
+		691B1755209AD01400658A13 /* VisitorNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B1754209AD01400658A13 /* VisitorNameViewController.swift */; };
+		691B1757209AD01B00658A13 /* HostEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B1756209AD01B00658A13 /* HostEmailViewController.swift */; };
+		691B1759209AD02200658A13 /* HostNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B1758209AD02200658A13 /* HostNameViewController.swift */; };
+		691B175B209AD02A00658A13 /* ParkingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B175A209AD02A00658A13 /* ParkingConfirmationViewController.swift */; };
+		691B175D209AD03300658A13 /* VehicleInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B175C209AD03300658A13 /* VehicleInformationViewController.swift */; };
+		691B175F209AD03A00658A13 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B175E209AD03A00658A13 /* ConfirmationViewController.swift */; };
+		691B1761209AD0C300658A13 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B1760209AD0C300658A13 /* Session.swift */; };
+		691B1764209AD4B200658A13 /* UtilityMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B1763209AD4B200658A13 /* UtilityMethods.swift */; };
 		6935771C209AAF020022E235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6935771B209AAF020022E235 /* AppDelegate.swift */; };
-		6935771E209AAF020022E235 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6935771D209AAF020022E235 /* ViewController.swift */; };
 		69357721209AAF020022E235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6935771F209AAF020022E235 /* Main.storyboard */; };
 		69357723209AAF030022E235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69357722209AAF030022E235 /* Assets.xcassets */; };
 		69357726209AAF030022E235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69357724209AAF030022E235 /* LaunchScreen.storyboard */; };
@@ -34,9 +44,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		691B174E209AB1DA00658A13 /* SEGOEUI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SEGOEUI.TTF; sourceTree = "<group>"; };
+		691B1750209ACFB600658A13 /* ScanCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCodeViewController.swift; sourceTree = "<group>"; };
+		691B1752209AD00B00658A13 /* VisitorEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorEmailViewController.swift; sourceTree = "<group>"; };
+		691B1754209AD01400658A13 /* VisitorNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorNameViewController.swift; sourceTree = "<group>"; };
+		691B1756209AD01B00658A13 /* HostEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostEmailViewController.swift; sourceTree = "<group>"; };
+		691B1758209AD02200658A13 /* HostNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostNameViewController.swift; sourceTree = "<group>"; };
+		691B175A209AD02A00658A13 /* ParkingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingConfirmationViewController.swift; sourceTree = "<group>"; };
+		691B175C209AD03300658A13 /* VehicleInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleInformationViewController.swift; sourceTree = "<group>"; };
+		691B175E209AD03A00658A13 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		691B1760209AD0C300658A13 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		691B1763209AD4B200658A13 /* UtilityMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityMethods.swift; sourceTree = "<group>"; };
 		69357718209AAF020022E235 /* MicrosoftArrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicrosoftArrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6935771B209AAF020022E235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6935771D209AAF020022E235 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		69357720209AAF020022E235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69357722209AAF030022E235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69357725209AAF030022E235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		691B1762209AD0D700658A13 /* MODEL */ = {
+			isa = PBXGroup;
+			children = (
+				691B1760209AD0C300658A13 /* Session.swift */,
+			);
+			path = MODEL;
+			sourceTree = "<group>";
+		};
 		6935770F209AAF020022E235 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +125,12 @@
 		6935771A209AAF020022E235 /* MicrosoftArrive */ = {
 			isa = PBXGroup;
 			children = (
-				6935771B209AAF020022E235 /* AppDelegate.swift */,
-				6935771D209AAF020022E235 /* ViewController.swift */,
-				6935771F209AAF020022E235 /* Main.storyboard */,
+				691B1762209AD0D700658A13 /* MODEL */,
+				6935774A209AB1460022E235 /* VIEW */,
+				69357749209AB1390022E235 /* CONTROLLER */,
 				69357722209AAF030022E235 /* Assets.xcassets */,
-				69357724209AAF030022E235 /* LaunchScreen.storyboard */,
 				69357727209AAF030022E235 /* Info.plist */,
+				691B174E209AB1DA00658A13 /* SEGOEUI.TTF */,
 			);
 			path = MicrosoftArrive;
 			sourceTree = "<group>";
@@ -123,6 +151,32 @@
 				6935773D209AAF040022E235 /* Info.plist */,
 			);
 			path = MicrosoftArriveUITests;
+			sourceTree = "<group>";
+		};
+		69357749209AB1390022E235 /* CONTROLLER */ = {
+			isa = PBXGroup;
+			children = (
+				6935771B209AAF020022E235 /* AppDelegate.swift */,
+				691B1750209ACFB600658A13 /* ScanCodeViewController.swift */,
+				691B1752209AD00B00658A13 /* VisitorEmailViewController.swift */,
+				691B1754209AD01400658A13 /* VisitorNameViewController.swift */,
+				691B1758209AD02200658A13 /* HostNameViewController.swift */,
+				691B1756209AD01B00658A13 /* HostEmailViewController.swift */,
+				691B175A209AD02A00658A13 /* ParkingConfirmationViewController.swift */,
+				691B175C209AD03300658A13 /* VehicleInformationViewController.swift */,
+				691B175E209AD03A00658A13 /* ConfirmationViewController.swift */,
+				691B1763209AD4B200658A13 /* UtilityMethods.swift */,
+			);
+			path = CONTROLLER;
+			sourceTree = "<group>";
+		};
+		6935774A209AB1460022E235 /* VIEW */ = {
+			isa = PBXGroup;
+			children = (
+				69357724209AAF030022E235 /* LaunchScreen.storyboard */,
+				6935771F209AAF020022E235 /* Main.storyboard */,
+			);
+			path = VIEW;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				691B174F209AB1DA00658A13 /* SEGOEUI.TTF in Resources */,
 				69357726209AAF030022E235 /* LaunchScreen.storyboard in Resources */,
 				69357723209AAF030022E235 /* Assets.xcassets in Resources */,
 				69357721209AAF020022E235 /* Main.storyboard in Resources */,
@@ -256,8 +311,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6935771E209AAF020022E235 /* ViewController.swift in Sources */,
+				691B1761209AD0C300658A13 /* Session.swift in Sources */,
+				691B1753209AD00B00658A13 /* VisitorEmailViewController.swift in Sources */,
+				691B1751209ACFB600658A13 /* ScanCodeViewController.swift in Sources */,
 				6935771C209AAF020022E235 /* AppDelegate.swift in Sources */,
+				691B175F209AD03A00658A13 /* ConfirmationViewController.swift in Sources */,
+				691B1755209AD01400658A13 /* VisitorNameViewController.swift in Sources */,
+				691B1764209AD4B200658A13 /* UtilityMethods.swift in Sources */,
+				691B1757209AD01B00658A13 /* HostEmailViewController.swift in Sources */,
+				691B175B209AD02A00658A13 /* ParkingConfirmationViewController.swift in Sources */,
+				691B175D209AD03300658A13 /* VehicleInformationViewController.swift in Sources */,
+				691B1759209AD02200658A13 /* HostNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SEGOEUI.TTF">
+            <string>SegoeUI</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Scan Code View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ScanCodeViewController" modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" customClass="ScanCodeViewController" customModule="MicrosoftArrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MicrosoftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="WeR-T6-egs">
+                                <rect key="frame" x="100" y="30" width="175" height="35"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MYL-sv-ElP" userLabel="Welcome Message Stack View">
+                                <rect key="frame" x="25" y="85" width="325" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGJ-0U-SnH" userLabel="Welcome!">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="32"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="24"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the icon below to check in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="aBH-vq-OAH" userLabel="Tap the icon below to check in!">
+                                        <rect key="frame" x="0.0" y="32" width="325" height="32"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="21"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeB-Fj-h9V">
+                                <rect key="frame" x="88" y="389" width="200" height="39"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                <state key="normal" title="I don't have a QR code">
+                                    <color key="titleColor" red="0.68627450980000004" green="0.86666666670000003" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="noCodePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eas-Mk-ufg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOE-p5-BuT">
+                                <rect key="frame" x="114" y="438" width="147" height="39"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                <state key="normal" title="I'm an employee">
+                                    <color key="titleColor" red="0.68627450980000004" green="0.86666666670000003" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="employeePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s0r-U6-XsP"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Cv-BL-Lto" userLabel="Privacy View">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="mob-bT-Nqb"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoG-r0-DM9">
+                                <rect key="frame" x="210" y="619" width="140" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Privacy statement">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacyStatementPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fEb-r1-Om4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hP-Cb-o0m">
+                                <rect key="frame" x="50" y="159" width="275" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Ywc-XY-M1Z"/>
+                                </constraints>
+                                <state key="normal" image="ScanQRCode"/>
+                                <connections>
+                                    <action selector="scanCodePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U6M-Pp-Mts"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.031372549019607843" green="0.12941176470588237" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MYL-sv-ElP" firstAttribute="top" secondItem="WeR-T6-egs" secondAttribute="bottom" constant="20" id="3hL-IX-t8A"/>
+                            <constraint firstItem="GeB-Fj-h9V" firstAttribute="top" secondItem="2hP-Cb-o0m" secondAttribute="bottom" constant="30" id="3ix-Pr-Y3z"/>
+                            <constraint firstItem="qOE-p5-BuT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dat-eN-jdD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2hP-Cb-o0m" secondAttribute="trailing" constant="50" id="F23-Kb-ooA"/>
+                            <constraint firstAttribute="trailing" secondItem="WeR-T6-egs" secondAttribute="trailing" constant="100" id="FBx-BY-NBW"/>
+                            <constraint firstItem="8Cv-BL-Lto" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="LPh-3B-bsQ"/>
+                            <constraint firstItem="8Cv-BL-Lto" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NYl-In-tnP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DoG-r0-DM9" secondAttribute="trailing" constant="25" id="RjD-xo-ENY"/>
+                            <constraint firstItem="qOE-p5-BuT" firstAttribute="top" secondItem="GeB-Fj-h9V" secondAttribute="bottom" constant="10" id="VDH-Jq-LT8"/>
+                            <constraint firstItem="WeR-T6-egs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="WTd-j7-Ol8"/>
+                            <constraint firstItem="WeR-T6-egs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="aUc-mT-3L6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MYL-sv-ElP" secondAttribute="trailing" constant="25" id="fE9-kK-m2P"/>
+                            <constraint firstItem="2hP-Cb-o0m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="iHK-vC-5Gf"/>
+                            <constraint firstItem="DoG-r0-DM9" firstAttribute="centerY" secondItem="8Cv-BL-Lto" secondAttribute="centerY" id="mma-Sq-fP1"/>
+                            <constraint firstItem="2hP-Cb-o0m" firstAttribute="top" secondItem="MYL-sv-ElP" secondAttribute="bottom" constant="10" id="rZL-Md-O1v"/>
+                            <constraint firstItem="MYL-sv-ElP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="vNj-Uw-kPv"/>
+                            <constraint firstItem="8Cv-BL-Lto" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yby-OD-AJb"/>
+                            <constraint firstItem="GeB-Fj-h9V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zeD-Wk-UPk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6" y="133"/>
+        </scene>
+        <!--Visitor Email View Controller-->
+        <scene sceneID="G0U-g7-Lto">
+            <objects>
+                <viewController storyboardIdentifier="VisitorEmailViewController" modalTransitionStyle="crossDissolve" id="Qts-vV-2Yj" userLabel="Visitor Email View Controller" customClass="VisitorEmailViewController" customModule="MicrosoftArrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cg9-Bm-2Se">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MicrosoftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jRO-BA-B6v">
+                                <rect key="frame" x="100" y="30" width="175" height="35"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check in using your email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkQ-7m-gl7">
+                                <rect key="frame" x="52" y="85" width="272" height="32"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="24"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.10000000149011612" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qjk-Uq-bRK" userLabel="Privacy View">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="PH3-Zc-8Rk"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKa-qZ-aWI">
+                                <rect key="frame" x="210" y="619" width="140" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Privacy statement">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacyStatementPressed:" destination="Qts-vV-2Yj" eventType="touchUpInside" id="yLH-SG-KQw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voM-1K-UKs">
+                                <rect key="frame" x="25" y="619" width="80" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startOverPressed:" destination="Qts-vV-2Yj" eventType="touchUpInside" id="DMO-vU-Bx2"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="5Xn-Ol-cbB" userLabel="Visitor Email Stack View">
+                                <rect key="frame" x="25" y="132" width="325" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your email address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTU-M6-gUw">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="38.5"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WW8-3h-fM7">
+                                        <rect key="frame" x="0.0" y="45.5" width="325" height="50"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="aMO-pp-NKP"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezR-YA-WG1">
+                                        <rect key="frame" x="0.0" y="102.5" width="325" height="50.5"/>
+                                        <color key="backgroundColor" red="0.31372549019607843" green="0.70196078431372544" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" red="0.047058823529411764" green="0.10196078431372549" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextPressed:" destination="Qts-vV-2Yj" eventType="touchUpInside" id="x7Y-s2-mzR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ay1-DU-nBd">
+                                        <rect key="frame" x="0.0" y="160" width="325" height="40"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                        <state key="normal" title="Continue without email">
+                                            <color key="titleColor" red="0.31764705882352939" green="0.70980392156862748" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="continueWithoutEmailPressed:" destination="Qts-vV-2Yj" eventType="touchUpInside" id="8qr-s7-IRP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ezR-YA-WG1" firstAttribute="height" secondItem="WW8-3h-fM7" secondAttribute="height" id="ap8-Qc-grF"/>
+                                    <constraint firstAttribute="height" constant="200" id="ebg-JX-boN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.031372549020000001" green="0.12941176469999999" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SkQ-7m-gl7" firstAttribute="top" secondItem="jRO-BA-B6v" secondAttribute="bottom" constant="20" id="1pn-lT-ECI"/>
+                            <constraint firstItem="qjk-Uq-bRK" firstAttribute="trailing" secondItem="uae-Ta-ntx" secondAttribute="trailing" id="6Xn-1F-x1H"/>
+                            <constraint firstItem="uae-Ta-ntx" firstAttribute="trailing" secondItem="AKa-qZ-aWI" secondAttribute="trailing" constant="25" id="DFw-qV-nkI"/>
+                            <constraint firstItem="qjk-Uq-bRK" firstAttribute="leading" secondItem="uae-Ta-ntx" secondAttribute="leading" id="PUQ-vj-M8N"/>
+                            <constraint firstItem="jRO-BA-B6v" firstAttribute="top" secondItem="uae-Ta-ntx" secondAttribute="top" constant="10" id="WOv-ki-s9P"/>
+                            <constraint firstItem="voM-1K-UKs" firstAttribute="leading" secondItem="uae-Ta-ntx" secondAttribute="leading" constant="25" id="Wd2-Ge-AQS"/>
+                            <constraint firstItem="5Xn-Ol-cbB" firstAttribute="leading" secondItem="uae-Ta-ntx" secondAttribute="leading" constant="25" id="Ylp-Sr-QvE"/>
+                            <constraint firstItem="voM-1K-UKs" firstAttribute="centerY" secondItem="qjk-Uq-bRK" secondAttribute="centerY" id="ct3-c3-plU"/>
+                            <constraint firstItem="AKa-qZ-aWI" firstAttribute="centerY" secondItem="qjk-Uq-bRK" secondAttribute="centerY" id="d63-ir-UMA"/>
+                            <constraint firstAttribute="trailing" secondItem="jRO-BA-B6v" secondAttribute="trailing" constant="100" id="doI-Un-hxG"/>
+                            <constraint firstItem="5Xn-Ol-cbB" firstAttribute="top" secondItem="SkQ-7m-gl7" secondAttribute="bottom" constant="15" id="osF-f1-bI4"/>
+                            <constraint firstItem="jRO-BA-B6v" firstAttribute="leading" secondItem="cg9-Bm-2Se" secondAttribute="leading" constant="100" id="qb6-4O-O1U"/>
+                            <constraint firstItem="qjk-Uq-bRK" firstAttribute="bottom" secondItem="uae-Ta-ntx" secondAttribute="bottom" id="uKK-J3-BDS"/>
+                            <constraint firstItem="SkQ-7m-gl7" firstAttribute="centerX" secondItem="cg9-Bm-2Se" secondAttribute="centerX" id="x4D-qn-O4y"/>
+                            <constraint firstItem="uae-Ta-ntx" firstAttribute="trailing" secondItem="5Xn-Ol-cbB" secondAttribute="trailing" constant="25" id="xla-Tv-5dN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uae-Ta-ntx"/>
+                    </view>
+                    <connections>
+                        <outlet property="userEmailTextField" destination="WW8-3h-fM7" id="Ld4-5M-bzg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uW2-9V-RIT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970" y="133"/>
+        </scene>
+        <!--Visitor Name View Controller-->
+        <scene sceneID="3QQ-cN-Ojk">
+            <objects>
+                <viewController storyboardIdentifier="VisitorNameViewController" modalTransitionStyle="crossDissolve" id="jEx-FH-QDk" userLabel="Visitor Name View Controller" customClass="VisitorNameViewController" customModule="MicrosoftArrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rE4-D8-OPC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MicrosoftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="cei-Dv-CL4">
+                                <rect key="frame" x="100" y="30" width="175" height="35"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce yourself" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auC-WG-2xm">
+                                <rect key="frame" x="91.5" y="85" width="192" height="32"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="24"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.10000000149011612" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTw-WU-zgq" userLabel="Privacy View">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ZdQ-uv-mtj"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuD-Fh-C9D">
+                                <rect key="frame" x="210" y="619" width="140" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Privacy statement">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacyStatementPressed:" destination="jEx-FH-QDk" eventType="touchUpInside" id="xqd-ea-TTS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5X-TZ-4tL">
+                                <rect key="frame" x="25" y="619" width="80" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startOverPressed:" destination="jEx-FH-QDk" eventType="touchUpInside" id="rgn-ew-u0q"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qmM-AB-VX2" userLabel="Visitor Name Stack View">
+                                <rect key="frame" x="25" y="132" width="325" height="380"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your first name*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Oi-M9-VLM">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="43"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VmP-hn-HTa">
+                                        <rect key="frame" x="0.0" y="48" width="325" height="50"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="r7F-34-Sl4"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your last name*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeX-5v-j88">
+                                        <rect key="frame" x="0.0" y="103" width="325" height="43"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zvw-Fh-qKU">
+                                        <rect key="frame" x="0.0" y="151" width="325" height="50"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your company*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCb-76-vxf">
+                                        <rect key="frame" x="0.0" y="206" width="325" height="43.5"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="arn-EV-f3g">
+                                        <rect key="frame" x="0.0" y="254.5" width="325" height="50"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Required fields" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0n-Ua-xdh">
+                                        <rect key="frame" x="0.0" y="309.5" width="325" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wg-zp-Meq">
+                                        <rect key="frame" x="0.0" y="330" width="325" height="50"/>
+                                        <color key="backgroundColor" red="0.69019607843137254" green="0.63921568627450975" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" red="0.1803921568627451" green="0.086274509803921567" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextPressed:" destination="jEx-FH-QDk" eventType="touchUpInside" id="t4g-v7-hdj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="380" id="6M6-Ap-u9J"/>
+                                    <constraint firstItem="Zvw-Fh-qKU" firstAttribute="height" secondItem="VmP-hn-HTa" secondAttribute="height" id="LWP-P5-J7r"/>
+                                    <constraint firstItem="0Wg-zp-Meq" firstAttribute="height" secondItem="VmP-hn-HTa" secondAttribute="height" id="NRx-oR-Ctw"/>
+                                    <constraint firstItem="arn-EV-f3g" firstAttribute="height" secondItem="VmP-hn-HTa" secondAttribute="height" id="o5t-z7-TZF"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1803921568627451" green="0.086274509803921567" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="K5X-TZ-4tL" firstAttribute="leading" secondItem="aXU-6e-gnP" secondAttribute="leading" constant="25" id="0np-4n-mhY"/>
+                            <constraint firstItem="cei-Dv-CL4" firstAttribute="leading" secondItem="rE4-D8-OPC" secondAttribute="leading" constant="100" id="1aO-2Q-Nhl"/>
+                            <constraint firstItem="YTw-WU-zgq" firstAttribute="bottom" secondItem="aXU-6e-gnP" secondAttribute="bottom" id="1lG-wa-Jqm"/>
+                            <constraint firstItem="qmM-AB-VX2" firstAttribute="leading" secondItem="aXU-6e-gnP" secondAttribute="leading" constant="25" id="27j-0C-oQm"/>
+                            <constraint firstItem="yuD-Fh-C9D" firstAttribute="centerY" secondItem="YTw-WU-zgq" secondAttribute="centerY" id="3Lu-if-xlX"/>
+                            <constraint firstItem="K5X-TZ-4tL" firstAttribute="centerY" secondItem="YTw-WU-zgq" secondAttribute="centerY" id="6UI-nk-QWF"/>
+                            <constraint firstItem="cei-Dv-CL4" firstAttribute="top" secondItem="aXU-6e-gnP" secondAttribute="top" constant="10" id="DPY-jh-a1n"/>
+                            <constraint firstItem="aXU-6e-gnP" firstAttribute="trailing" secondItem="yuD-Fh-C9D" secondAttribute="trailing" constant="25" id="Gbh-rE-uaz"/>
+                            <constraint firstAttribute="trailing" secondItem="cei-Dv-CL4" secondAttribute="trailing" constant="100" id="I2P-KN-gId"/>
+                            <constraint firstItem="YTw-WU-zgq" firstAttribute="trailing" secondItem="aXU-6e-gnP" secondAttribute="trailing" id="TGO-ya-oGT"/>
+                            <constraint firstItem="auC-WG-2xm" firstAttribute="top" secondItem="cei-Dv-CL4" secondAttribute="bottom" constant="20" id="TZD-iW-rAi"/>
+                            <constraint firstItem="auC-WG-2xm" firstAttribute="centerX" secondItem="rE4-D8-OPC" secondAttribute="centerX" id="bzt-jE-23V"/>
+                            <constraint firstItem="qmM-AB-VX2" firstAttribute="top" secondItem="auC-WG-2xm" secondAttribute="bottom" constant="15" id="hCV-rz-KZL"/>
+                            <constraint firstItem="aXU-6e-gnP" firstAttribute="trailing" secondItem="qmM-AB-VX2" secondAttribute="trailing" constant="25" id="kbi-aa-lVc"/>
+                            <constraint firstItem="YTw-WU-zgq" firstAttribute="leading" secondItem="aXU-6e-gnP" secondAttribute="leading" id="wXi-ST-KIV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aXU-6e-gnP"/>
+                    </view>
+                    <connections>
+                        <outlet property="visitorCompanyTextField" destination="arn-EV-f3g" id="dKO-0a-1Cu"/>
+                        <outlet property="visitorFirstNameTextField" destination="VmP-hn-HTa" id="wcO-yT-Pue"/>
+                        <outlet property="visitorLastNameTextField" destination="Zvw-Fh-qKU" id="vh3-DN-GXO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yrf-xF-6jn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1754" y="133"/>
+        </scene>
+        <!--Parking Confirmation View Controller-->
+        <scene sceneID="q3N-XZ-Qgp">
+            <objects>
+                <viewController storyboardIdentifier="ParkingConfirmationViewController" modalTransitionStyle="crossDissolve" id="J6b-yh-XFo" userLabel="Parking Confirmation View Controller" customClass="ParkingConfirmationViewController" customModule="MicrosoftArrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UJ5-eB-LHZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MicrosoftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NEZ-2H-eAl">
+                                <rect key="frame" x="100" y="30" width="175" height="35"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parked on campus?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEl-dB-bGm">
+                                <rect key="frame" x="85" y="85" width="205" height="32"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="24"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.10000000149011612" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mF8-RH-kZV" userLabel="Privacy View">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="o8Q-L6-obP"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8N-da-ndO">
+                                <rect key="frame" x="210" y="619" width="140" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Privacy statement">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacyStatementPressed:" destination="J6b-yh-XFo" eventType="touchUpInside" id="OIX-Zw-GVt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2z-Sm-LNA">
+                                <rect key="frame" x="25" y="619" width="80" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startOverPressed:" destination="J6b-yh-XFo" eventType="touchUpInside" id="h4H-mv-1fi"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8ji-v4-6NP" userLabel="Parking Confirmation Stack View">
+                                <rect key="frame" x="112.5" y="176" width="150" height="315"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ab-MF-4Mg">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <color key="backgroundColor" red="0.90588235294117647" green="0.95294117647058818" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="Iqq-gg-nXs"/>
+                                            <constraint firstAttribute="height" constant="150" id="zeE-GG-VgU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="25"/>
+                                        <state key="normal" title="Yes">
+                                            <color key="titleColor" red="0.12941176470588237" green="0.22745098039215686" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="yesPressed:" destination="J6b-yh-XFo" eventType="touchUpInside" id="TuY-JF-quh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwP-Ck-B9H">
+                                        <rect key="frame" x="0.0" y="165" width="150" height="150"/>
+                                        <color key="backgroundColor" red="0.90588235294117647" green="0.95294117647058818" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="25"/>
+                                        <state key="normal" title="No">
+                                            <color key="titleColor" red="0.16078431372549021" green="0.28235294117647058" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="noPressed:" destination="J6b-yh-XFo" eventType="touchUpInside" id="t6I-3z-cpB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="81c-38-cJA"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.28627450980392155" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SEl-dB-bGm" firstAttribute="centerX" secondItem="UJ5-eB-LHZ" secondAttribute="centerX" id="5cB-Wh-ZqO"/>
+                            <constraint firstItem="mF8-RH-kZV" firstAttribute="trailing" secondItem="Jv3-4Y-LQf" secondAttribute="trailing" id="Dej-bS-5Eo"/>
+                            <constraint firstItem="p8N-da-ndO" firstAttribute="centerY" secondItem="mF8-RH-kZV" secondAttribute="centerY" id="G5f-Ln-faw"/>
+                            <constraint firstItem="Jv3-4Y-LQf" firstAttribute="trailing" secondItem="p8N-da-ndO" secondAttribute="trailing" constant="25" id="Gpc-Wc-oWb"/>
+                            <constraint firstItem="Z2z-Sm-LNA" firstAttribute="leading" secondItem="Jv3-4Y-LQf" secondAttribute="leading" constant="25" id="JMO-Ph-pKv"/>
+                            <constraint firstItem="SEl-dB-bGm" firstAttribute="top" secondItem="NEZ-2H-eAl" secondAttribute="bottom" constant="20" id="Ots-GK-YI9"/>
+                            <constraint firstItem="8ji-v4-6NP" firstAttribute="centerX" secondItem="UJ5-eB-LHZ" secondAttribute="centerX" id="VTR-Ns-kQE"/>
+                            <constraint firstItem="NEZ-2H-eAl" firstAttribute="leading" secondItem="UJ5-eB-LHZ" secondAttribute="leading" constant="100" id="X54-So-UEg"/>
+                            <constraint firstItem="NEZ-2H-eAl" firstAttribute="top" secondItem="Jv3-4Y-LQf" secondAttribute="top" constant="10" id="Zul-fu-nNO"/>
+                            <constraint firstItem="mF8-RH-kZV" firstAttribute="leading" secondItem="Jv3-4Y-LQf" secondAttribute="leading" id="bWI-9y-Jq3"/>
+                            <constraint firstItem="Z2z-Sm-LNA" firstAttribute="centerY" secondItem="mF8-RH-kZV" secondAttribute="centerY" id="cZd-hG-uD5"/>
+                            <constraint firstItem="8ji-v4-6NP" firstAttribute="centerY" secondItem="UJ5-eB-LHZ" secondAttribute="centerY" id="rUS-KM-XYU"/>
+                            <constraint firstItem="mF8-RH-kZV" firstAttribute="bottom" secondItem="Jv3-4Y-LQf" secondAttribute="bottom" id="uz7-bf-MB7"/>
+                            <constraint firstAttribute="trailing" secondItem="NEZ-2H-eAl" secondAttribute="trailing" constant="100" id="wjJ-TN-JMM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jv3-4Y-LQf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qne-ge-lYo" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4055" y="133"/>
+        </scene>
+        <!--Vehicle View Controller-->
+        <scene sceneID="4hl-TT-t0d">
+            <objects>
+                <viewController storyboardIdentifier="VehicleInformationViewController" modalTransitionStyle="crossDissolve" id="9GG-BV-4mG" userLabel="Vehicle View Controller" customClass="VehicleInformationViewController" customModule="MicrosoftArrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2E7-n0-q5l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MicrosoftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="qtn-HA-I3P">
+                                <rect key="frame" x="100" y="30" width="175" height="35"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmZ-tA-huK">
+                                <rect key="frame" x="84.5" y="85" width="206" height="32"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="24"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.10000000149011612" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NyK-hL-dkT" userLabel="Privacy View">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="GQ4-xa-Erj"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCs-Sc-F3q">
+                                <rect key="frame" x="210" y="619" width="140" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Privacy statement">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacyStatementPressed:" destination="9GG-BV-4mG" eventType="touchUpInside" id="dT4-HO-1hQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puq-oP-4jj">
+                                <rect key="frame" x="25" y="619" width="80" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startOverPressed:" destination="9GG-BV-4mG" eventType="touchUpInside" id="ZdQ-nZ-N79"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kDq-VB-0XJ" userLabel="Visitor Name Stack View">
+                                <rect key="frame" x="25" y="132" width="325" height="380"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3sT-ex-1v4" userLabel="License and State Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="100"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="d3M-pf-Mpc" userLabel="License Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="156.5" height="100"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License Plate*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRb-gu-0rO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="156.5" height="50"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dmT-ia-kaj">
+                                                        <rect key="frame" x="0.0" y="50" width="156.5" height="50"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="ezk-4h-6Xd"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NYO-wc-bKv" userLabel="State Stack View">
+                                                <rect key="frame" x="168.5" y="0.0" width="156.5" height="100"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRA-yi-gcA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="156.5" height="50"/>
+                                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L4B-E2-Krw">
+                                                        <rect key="frame" x="0.0" y="50" width="156.5" height="50"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="qRA-yi-gcA" firstAttribute="height" secondItem="dmT-ia-kaj" secondAttribute="height" id="jP7-Ja-edy"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ci-sW-Ybt">
+                                        <rect key="frame" x="0.0" y="105" width="325" height="36"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k6L-mv-OK7">
+                                        <rect key="frame" x="0.0" y="146" width="325" height="50"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mum-Gg-gWk">
+                                        <rect key="frame" x="0.0" y="201" width="325" height="36"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5I2-KR-Lcx">
+                                        <rect key="frame" x="0.0" y="242" width="325" height="50"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Required fields" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELf-9M-WBA">
+                                        <rect key="frame" x="0.0" y="297" width="325" height="28"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTE-pm-49h">
+                                        <rect key="frame" x="0.0" y="330" width="325" height="50"/>
+                                        <color key="backgroundColor" red="0.90196078431372551" green="0.94901960784313721" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" red="0.11372549019607843" green="0.28627450980392155" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextPressed:" destination="9GG-BV-4mG" eventType="touchUpInside" id="EuV-nG-7Nf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="k6L-mv-OK7" firstAttribute="height" secondItem="dmT-ia-kaj" secondAttribute="height" id="KX6-Yt-b0L"/>
+                                    <constraint firstItem="5I2-KR-Lcx" firstAttribute="height" secondItem="dmT-ia-kaj" secondAttribute="height" id="Zei-vH-KKV"/>
+                                    <constraint firstItem="RTE-pm-49h" firstAttribute="height" secondItem="5I2-KR-Lcx" secondAttribute="height" id="hAL-O1-7Nc"/>
+                                    <constraint firstAttribute="height" constant="380" id="kqk-Db-LaA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.28627450980392155" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kDq-VB-0XJ" firstAttribute="leading" secondItem="aal-5f-tSy" secondAttribute="leading" constant="25" id="1j9-uC-PlA"/>
+                            <constraint firstItem="aal-5f-tSy" firstAttribute="trailing" secondItem="kDq-VB-0XJ" secondAttribute="trailing" constant="25" id="2sG-gR-Pqe"/>
+                            <constraint firstItem="aal-5f-tSy" firstAttribute="trailing" secondItem="QCs-Sc-F3q" secondAttribute="trailing" constant="25" id="5Dq-1z-GuI"/>
+                            <constraint firstItem="NyK-hL-dkT" firstAttribute="trailing" secondItem="aal-5f-tSy" secondAttribute="trailing" id="5RT-XW-p7t"/>
+                            <constraint firstItem="NyK-hL-dkT" firstAttribute="bottom" secondItem="aal-5f-tSy" secondAttribute="bottom" id="5Uz-Bi-33V"/>
+                            <constraint firstAttribute="trailing" secondItem="qtn-HA-I3P" secondAttribute="trailing" constant="100" id="5bh-gt-ClH"/>
+                            <constraint firstItem="kDq-VB-0XJ" firstAttribute="top" secondItem="ZmZ-tA-huK" secondAttribute="bottom" constant="15" id="73h-U2-LtI"/>
+                            <constraint firstItem="qtn-HA-I3P" firstAttribute="top" secondItem="aal-5f-tSy" secondAttribute="top" constant="10" id="96i-gq-bOS"/>
+                            <constraint firstItem="Puq-oP-4jj" firstAttribute="leading" secondItem="aal-5f-tSy" secondAttribute="leading" constant="25" id="Cay-jv-nUl"/>
+                            <constraint firstItem="NyK-hL-dkT" firstAttribute="leading" secondItem="aal-5f-tSy" secondAttribute="leading" id="E33-WN-RrH"/>
+                            <constraint firstItem="Puq-oP-4jj" firstAttribute="centerY" secondItem="NyK-hL-dkT" secondAttribute="centerY" id="Mfp-6J-eI2"/>
+                            <constraint firstItem="QCs-Sc-F3q" firstAttribute="centerY" secondItem="NyK-hL-dkT" secondAttribute="centerY" id="YaN-iZ-LAi"/>
+                            <constraint firstItem="qtn-HA-I3P" firstAttribute="leading" secondItem="2E7-n0-q5l" secondAttribute="leading" constant="100" id="fhN-Vw-G3i"/>
+                            <constraint firstItem="ZmZ-tA-huK" firstAttribute="top" secondItem="qtn-HA-I3P" secondAttribute="bottom" constant="20" id="lVN-kW-Yml"/>
+                            <constraint firstItem="ZmZ-tA-huK" firstAttribute="centerX" secondItem="2E7-n0-q5l" secondAttribute="centerX" id="vAX-3V-aMi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aal-5f-tSy"/>
+                    </view>
+                    <connections>
+                        <outlet property="licensePlateTextField" destination="dmT-ia-kaj" id="xeK-ED-Zzq"/>
+                        <outlet property="makeTextField" destination="k6L-mv-OK7" id="aew-wi-MTK"/>
+                        <outlet property="modelTextField" destination="5I2-KR-Lcx" id="QbM-7V-HX8"/>
+                        <outlet property="stateTextField" destination="L4B-E2-Krw" id="ZWP-Fg-Zq0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zGH-1v-gGS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4798" y="133"/>
+        </scene>
+        <!--Visitor Name View Controller-->
+        <scene sceneID="CaA-y1-Z5e">
+            <objects>
+                <viewController storyboardIdentifier="ConfirmationViewController" modalTransitionStyle="crossDissolve" id="xBA-9n-rol" userLabel="Visitor Name View Controller" customClass="ConfirmationViewController" customModule="MicrosoftArrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lv7-8d-TBg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MicrosoftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="AYV-aX-WxB">
+                                <rect key="frame" x="100" y="30" width="175" height="35"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm your check-in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLG-1V-0Vz">
+                                <rect key="frame" x="71" y="85" width="233.5" height="32"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="24"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.10000000149011612" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpl-3h-E0B" userLabel="Privacy View">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="1xQ-jA-y6O"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjb-9l-CKp">
+                                <rect key="frame" x="210" y="619" width="140" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Privacy statement">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacyStatementPressed:" destination="xBA-9n-rol" eventType="touchUpInside" id="Y0i-04-Bny"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="had-0h-4QJ">
+                                <rect key="frame" x="25" y="619" width="80" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startOverPressed:" destination="xBA-9n-rol" eventType="touchUpInside" id="PJO-4N-SHq"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Xs-Ym-BWD" userLabel="Visitor Name Stack View">
+                                <rect key="frame" x="25" y="132" width="325" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visitor Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0o0-xY-YgI">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="32"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                        <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Visitor Name or Email&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zl-94-xUJ">
+                                        <rect key="frame" x="0.0" y="37" width="325" height="36.5"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsJ-dh-OVb">
+                                        <rect key="frame" x="0.0" y="78.5" width="325" height="32"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                        <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Vehicle Information&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrn-Lj-0Y1">
+                                        <rect key="frame" x="0.0" y="115.5" width="325" height="36"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8D-1h-kDD">
+                                        <rect key="frame" x="0.0" y="156.5" width="325" height="32.5"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                        <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Host Name or Email&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="866-Yx-Xne">
+                                        <rect key="frame" x="0.0" y="194" width="325" height="46"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qnh-wJ-vrQ" userLabel="Skip Badge Printing Stack View">
+                                        <rect key="frame" x="0.0" y="245" width="325" height="0.0"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZ3-sc-H7U">
+                                        <rect key="frame" x="0.0" y="250" width="325" height="50"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.72941176470588232" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="iDg-Hn-zaa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Confirm">
+                                            <color key="titleColor" red="0.031372549019607843" green="0.12941176470588237" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="confirmPressed:" destination="xBA-9n-rol" eventType="touchUpInside" id="TnR-pc-m1H"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="tF3-wz-U1X"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.031372549019607843" green="0.12941176470588237" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aLG-1V-0Vz" firstAttribute="centerX" secondItem="Lv7-8d-TBg" secondAttribute="centerX" id="0jY-DU-wlR"/>
+                            <constraint firstItem="kpl-3h-E0B" firstAttribute="leading" secondItem="jnh-TN-hPs" secondAttribute="leading" id="9D3-WK-NNh"/>
+                            <constraint firstItem="jnh-TN-hPs" firstAttribute="trailing" secondItem="wjb-9l-CKp" secondAttribute="trailing" constant="25" id="CAf-RV-6s3"/>
+                            <constraint firstItem="wjb-9l-CKp" firstAttribute="centerY" secondItem="kpl-3h-E0B" secondAttribute="centerY" id="E4g-0C-WGW"/>
+                            <constraint firstItem="kpl-3h-E0B" firstAttribute="bottom" secondItem="jnh-TN-hPs" secondAttribute="bottom" id="MaC-5I-gwF"/>
+                            <constraint firstItem="6Xs-Ym-BWD" firstAttribute="top" secondItem="aLG-1V-0Vz" secondAttribute="bottom" constant="15" id="NlY-hD-qx2"/>
+                            <constraint firstItem="had-0h-4QJ" firstAttribute="centerY" secondItem="kpl-3h-E0B" secondAttribute="centerY" id="WpE-1y-Gob"/>
+                            <constraint firstAttribute="trailing" secondItem="AYV-aX-WxB" secondAttribute="trailing" constant="100" id="YGG-lX-kRH"/>
+                            <constraint firstItem="had-0h-4QJ" firstAttribute="leading" secondItem="jnh-TN-hPs" secondAttribute="leading" constant="25" id="bH9-dE-kqB"/>
+                            <constraint firstItem="6Xs-Ym-BWD" firstAttribute="leading" secondItem="jnh-TN-hPs" secondAttribute="leading" constant="25" id="bka-qC-9JH"/>
+                            <constraint firstItem="AYV-aX-WxB" firstAttribute="top" secondItem="jnh-TN-hPs" secondAttribute="top" constant="10" id="e8R-X6-GYS"/>
+                            <constraint firstItem="kpl-3h-E0B" firstAttribute="trailing" secondItem="jnh-TN-hPs" secondAttribute="trailing" id="jAh-Lf-FLa"/>
+                            <constraint firstItem="aLG-1V-0Vz" firstAttribute="top" secondItem="AYV-aX-WxB" secondAttribute="bottom" constant="20" id="kPk-X0-ObA"/>
+                            <constraint firstItem="jnh-TN-hPs" firstAttribute="trailing" secondItem="6Xs-Ym-BWD" secondAttribute="trailing" constant="25" id="kqB-4r-jJq"/>
+                            <constraint firstItem="AYV-aX-WxB" firstAttribute="leading" secondItem="Lv7-8d-TBg" secondAttribute="leading" constant="100" id="uEt-g3-SEb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jnh-TN-hPs"/>
+                    </view>
+                    <connections>
+                        <outlet property="hostInformationLabel" destination="866-Yx-Xne" id="g4b-yA-gOe"/>
+                        <outlet property="vehicleInformationLabel" destination="wrn-Lj-0Y1" id="Tw4-Ye-uEV"/>
+                        <outlet property="vehicleInformationTitleLabel" destination="UsJ-dh-OVb" id="hYb-w0-Jr1"/>
+                        <outlet property="visitorInformationLabel" destination="2Zl-94-xUJ" id="1Na-va-NL9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cI7-N3-Vsh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5566" y="133"/>
+        </scene>
+        <!--Host Name View Controller-->
+        <scene sceneID="nk2-hU-xWh">
+            <objects>
+                <viewController storyboardIdentifier="HostNameViewController" modalTransitionStyle="crossDissolve" id="RsZ-CO-bl3" userLabel="Host Name View Controller" customClass="HostNameViewController" customModule="MicrosoftArrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6LW-cW-ZBV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MicrosoftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="P6q-BH-Dt9">
+                                <rect key="frame" x="100" y="30" width="175" height="35"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who are you here to see?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9K-N4-9lA">
+                                <rect key="frame" x="52.5" y="85" width="270" height="32"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="24"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.10000000149011612" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIx-Gl-406" userLabel="Privacy View">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="IvE-ZT-8E7"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5Q-3c-wbC">
+                                <rect key="frame" x="210" y="619" width="140" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Privacy statement">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacyStatementPressed:" destination="RsZ-CO-bl3" eventType="touchUpInside" id="GhM-hN-qbS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1v-72-oLB">
+                                <rect key="frame" x="25" y="619" width="80" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startOverPressed:" destination="RsZ-CO-bl3" eventType="touchUpInside" id="OTJ-Uh-kH1"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cUd-x6-H2W" userLabel="Visitor Name Stack View">
+                                <rect key="frame" x="25" y="132" width="325" height="350"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host first name*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8b-ga-MVr">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="43"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yop-w6-QRY">
+                                        <rect key="frame" x="0.0" y="48" width="325" height="50"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="wR2-5y-Zjo"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host last name*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ca-tS-caO">
+                                        <rect key="frame" x="0.0" y="103" width="325" height="43"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VLE-Sx-yLP">
+                                        <rect key="frame" x="0.0" y="151" width="325" height="50"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Required fields" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vat-MM-AUg">
+                                        <rect key="frame" x="0.0" y="206" width="325" height="36.5"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qS9-cY-NOv">
+                                        <rect key="frame" x="0.0" y="247.5" width="325" height="50"/>
+                                        <color key="backgroundColor" red="0.93333333333333335" green="0.4392156862745098" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" red="0.30196078431372547" green="0.090196078431372548" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextPressed:" destination="RsZ-CO-bl3" eventType="touchUpInside" id="yEc-f9-HiS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFx-GR-khI">
+                                        <rect key="frame" x="0.0" y="302.5" width="325" height="47.5"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="17"/>
+                                        <state key="normal" title="Enter your host's email address">
+                                            <color key="titleColor" red="0.93333333333333335" green="0.4392156862745098" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enterHostEmailPressed:" destination="RsZ-CO-bl3" eventType="touchUpInside" id="8km-UA-E30"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="4OT-bd-Me1"/>
+                                    <constraint firstItem="qS9-cY-NOv" firstAttribute="height" secondItem="Yop-w6-QRY" secondAttribute="height" id="KS8-2T-A03"/>
+                                    <constraint firstItem="VLE-Sx-yLP" firstAttribute="height" secondItem="Yop-w6-QRY" secondAttribute="height" id="QRc-aV-bvP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33333333333333331" green="0.058823529411764705" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gIx-Gl-406" firstAttribute="bottom" secondItem="rpY-Nn-50d" secondAttribute="bottom" id="4PI-Uf-alG"/>
+                            <constraint firstItem="rpY-Nn-50d" firstAttribute="trailing" secondItem="cUd-x6-H2W" secondAttribute="trailing" constant="25" id="8K2-JV-qXW"/>
+                            <constraint firstItem="cUd-x6-H2W" firstAttribute="leading" secondItem="rpY-Nn-50d" secondAttribute="leading" constant="25" id="8KX-iJ-hNZ"/>
+                            <constraint firstItem="gIx-Gl-406" firstAttribute="leading" secondItem="rpY-Nn-50d" secondAttribute="leading" id="AXI-OM-puC"/>
+                            <constraint firstItem="J9K-N4-9lA" firstAttribute="top" secondItem="P6q-BH-Dt9" secondAttribute="bottom" constant="20" id="DVQ-TV-GjW"/>
+                            <constraint firstItem="m1v-72-oLB" firstAttribute="centerY" secondItem="gIx-Gl-406" secondAttribute="centerY" id="NyK-W5-aZP"/>
+                            <constraint firstItem="m1v-72-oLB" firstAttribute="leading" secondItem="rpY-Nn-50d" secondAttribute="leading" constant="25" id="Tuw-DU-n87"/>
+                            <constraint firstAttribute="trailing" secondItem="P6q-BH-Dt9" secondAttribute="trailing" constant="100" id="Yzp-ha-k1A"/>
+                            <constraint firstItem="rpY-Nn-50d" firstAttribute="trailing" secondItem="n5Q-3c-wbC" secondAttribute="trailing" constant="25" id="gbM-ae-daq"/>
+                            <constraint firstItem="cUd-x6-H2W" firstAttribute="top" secondItem="J9K-N4-9lA" secondAttribute="bottom" constant="15" id="iFU-R5-VYl"/>
+                            <constraint firstItem="gIx-Gl-406" firstAttribute="trailing" secondItem="rpY-Nn-50d" secondAttribute="trailing" id="oHf-KS-8FJ"/>
+                            <constraint firstItem="J9K-N4-9lA" firstAttribute="centerX" secondItem="6LW-cW-ZBV" secondAttribute="centerX" id="pdJ-X9-H8z"/>
+                            <constraint firstItem="P6q-BH-Dt9" firstAttribute="leading" secondItem="6LW-cW-ZBV" secondAttribute="leading" constant="100" id="s5v-Ll-X6k"/>
+                            <constraint firstItem="n5Q-3c-wbC" firstAttribute="centerY" secondItem="gIx-Gl-406" secondAttribute="centerY" id="tsH-Mj-o9D"/>
+                            <constraint firstItem="P6q-BH-Dt9" firstAttribute="top" secondItem="rpY-Nn-50d" secondAttribute="top" constant="10" id="vvP-zV-M3K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rpY-Nn-50d"/>
+                    </view>
+                    <connections>
+                        <outlet property="hostFirstNameTextField" destination="Yop-w6-QRY" id="XZn-D8-URD"/>
+                        <outlet property="hostLastNameTextField" destination="VLE-Sx-yLP" id="K38-NN-uhA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ki-ye-oB2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2530" y="133"/>
+        </scene>
+        <!--Host Email View Controller-->
+        <scene sceneID="Qcm-BN-9a8">
+            <objects>
+                <viewController storyboardIdentifier="HostEmailViewController" modalTransitionStyle="crossDissolve" id="9of-ho-DRq" userLabel="Host Email View Controller" customClass="HostEmailViewController" customModule="MicrosoftArrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vhg-Bu-mEg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MicrosoftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="tlF-km-85H">
+                                <rect key="frame" x="100" y="30" width="175" height="35"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who are you here to see?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ0-ux-7v1">
+                                <rect key="frame" x="52.5" y="85" width="270" height="32"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="24"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.10000000149011612" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkQ-PJ-vcb" userLabel="Privacy View">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="tML-Va-Tj4"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cH9-8j-nq7">
+                                <rect key="frame" x="210" y="619" width="140" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Privacy statement">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacyStatementPressed:" destination="9of-ho-DRq" eventType="touchUpInside" id="ENB-xX-505"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93u-0z-BBw">
+                                <rect key="frame" x="25" y="619" width="80" height="36"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startOverPressed:" destination="9of-ho-DRq" eventType="touchUpInside" id="w5o-pe-MAQ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="5hH-QW-Swi" userLabel="Visitor Email Stack View">
+                                <rect key="frame" x="25" y="132" width="325" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host's email address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dR-M9-Rs5">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="35.5"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zkF-Rw-V1C">
+                                        <rect key="frame" x="0.0" y="42.5" width="325" height="50"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Q5B-Hk-gkb"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mw-c9-2bw">
+                                        <rect key="frame" x="0.0" y="99.5" width="325" height="50.5"/>
+                                        <color key="backgroundColor" red="0.93333333333333335" green="0.4392156862745098" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" red="0.32941176470588235" green="0.058823529411764705" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextPressed:" destination="9of-ho-DRq" eventType="touchUpInside" id="PdF-Zo-Yg2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5Mw-c9-2bw" firstAttribute="height" secondItem="zkF-Rw-V1C" secondAttribute="height" id="vYp-cX-urQ"/>
+                                    <constraint firstAttribute="height" constant="150" id="yQA-i9-LQ3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32941176470588235" green="0.058823529411764705" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E8U-iK-4vs" firstAttribute="trailing" secondItem="cH9-8j-nq7" secondAttribute="trailing" constant="25" id="2Nc-kq-Jli"/>
+                            <constraint firstItem="gkQ-PJ-vcb" firstAttribute="leading" secondItem="E8U-iK-4vs" secondAttribute="leading" id="3jU-ad-hfj"/>
+                            <constraint firstItem="5hH-QW-Swi" firstAttribute="top" secondItem="cJ0-ux-7v1" secondAttribute="bottom" constant="15" id="8tg-su-8mh"/>
+                            <constraint firstItem="5hH-QW-Swi" firstAttribute="leading" secondItem="E8U-iK-4vs" secondAttribute="leading" constant="25" id="Yxq-B6-cbX"/>
+                            <constraint firstItem="cJ0-ux-7v1" firstAttribute="centerX" secondItem="Vhg-Bu-mEg" secondAttribute="centerX" id="Z7d-kj-d8f"/>
+                            <constraint firstItem="93u-0z-BBw" firstAttribute="leading" secondItem="E8U-iK-4vs" secondAttribute="leading" constant="25" id="eVG-7Y-ror"/>
+                            <constraint firstAttribute="trailing" secondItem="tlF-km-85H" secondAttribute="trailing" constant="100" id="f23-Rz-unI"/>
+                            <constraint firstItem="tlF-km-85H" firstAttribute="leading" secondItem="Vhg-Bu-mEg" secondAttribute="leading" constant="100" id="g0B-dz-JtV"/>
+                            <constraint firstItem="gkQ-PJ-vcb" firstAttribute="trailing" secondItem="E8U-iK-4vs" secondAttribute="trailing" id="htX-i3-OX7"/>
+                            <constraint firstItem="93u-0z-BBw" firstAttribute="centerY" secondItem="gkQ-PJ-vcb" secondAttribute="centerY" id="tJX-ON-4rF"/>
+                            <constraint firstItem="gkQ-PJ-vcb" firstAttribute="bottom" secondItem="E8U-iK-4vs" secondAttribute="bottom" id="tq5-e2-jQd"/>
+                            <constraint firstItem="tlF-km-85H" firstAttribute="top" secondItem="E8U-iK-4vs" secondAttribute="top" constant="10" id="uDn-7G-vG8"/>
+                            <constraint firstItem="cH9-8j-nq7" firstAttribute="centerY" secondItem="gkQ-PJ-vcb" secondAttribute="centerY" id="uLO-Ir-Y0S"/>
+                            <constraint firstItem="cJ0-ux-7v1" firstAttribute="top" secondItem="tlF-km-85H" secondAttribute="bottom" constant="20" id="vtZ-rA-c1w"/>
+                            <constraint firstItem="E8U-iK-4vs" firstAttribute="trailing" secondItem="5hH-QW-Swi" secondAttribute="trailing" constant="25" id="wAl-iI-gED"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E8U-iK-4vs"/>
+                    </view>
+                    <connections>
+                        <outlet property="hostEmailTextField" destination="zkF-Rw-V1C" id="ror-Mx-Lzk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="356-C6-aq1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3298" y="133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MicrosoftLogo" width="166" height="35"/>
+        <image name="ScanQRCode" width="304" height="214"/>
+    </resources>
+</document>
